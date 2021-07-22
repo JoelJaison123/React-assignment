@@ -1,0 +1,31 @@
+/* My New CSS */
+.Content{
+    color: #fff;
+    text-align: justify;
+    margin: 30px;
+  }
+  
+  .icon{
+    float: left;
+    padding-right: 20px;
+  }
+  
+  .Icon-Display{
+    margin: 20px;
+    padding-top: 100px;
+  }
+  
+  p{
+    font-size: 20px;
+  }
+  
+  /* Breakpoint for Small devices [ phones, 600px and down ]*/
+  @media (max-width: 600px){
+    .Content{
+      text-align: left;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+  

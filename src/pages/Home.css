@@ -1,0 +1,109 @@
+/* My New CSS */
+.Home{
+    margin-top: 200px;
+    color: #ffff;
+  }
+  
+  h1{
+    font-size: 150px;
+    margin: 0;
+    padding: 0%;
+  }
+  h2{
+    font-size: 70px;
+    margin: 0;
+    padding: 0%;
+  }
+  h3{
+    font-size: 50px;
+    margin: 0;
+    padding: 0%;
+  }
+  
+  h4{
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 0;
+    padding: 0%;
+  }
+  
+  .area {
+      display: flex;
+    margin-top: 50px;
+      align-items: center;
+    /* justify-content: center; */
+      width: 100%;
+  }
+  
+  .scroll {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #ffff;
+      border-radius: 50%;
+      position: relative;
+      animation: down 1.5s infinite;
+      -webkit-animation: down 1.5s infinite;
+  }
+  
+  .scroll::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 18px;
+    height: 18px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+  }
+  
+  @keyframes down {
+      0% {
+          transform: translate(0);
+      }
+      20% {
+          transform: translateY(15px);
+      }
+      40% {
+          transform: translate(0);
+      }
+  }
+  
+  @-webkit-keyframes down {
+      0% {
+          transform: translate(0);
+      }
+      20% {
+          transform: translateY(15px);
+      }
+      40% {
+          transform: translate(0);
+      }
+  }
+  
+  /* Breakpoint for Small devices [ phones, 600px and down ]*/
+  @media (max-width: 600px){
+    h1{
+      font-size: 80px;
+    }
+    h2{
+      font-size: 40px;
+    }
+    h3{
+      font-size: 30px;
+    }
+    h4{
+      font-size: 30px;
+    }
+    .scroll{
+      width: 30px;
+      height: 30px;
+    }
+    .scroll::before{
+      top: 6px;
+      left: 9px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  

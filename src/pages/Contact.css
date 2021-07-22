@@ -1,0 +1,101 @@
+/* Contact form page styling  */
+.Contact{
+    margin: 30px;
+    padding-top: 50px;
+  }
+  
+  .Txt{
+    font-size: 90px;
+    margin: 0px;
+  }
+  
+  .container {
+    height: auto;
+    width: 50%;
+    font-family: 'Cabin', sans-serif;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: block;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  form {
+    font-family: 'Cabin', sans-serif;
+    padding: 0;
+    width: 90%;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-input {
+    color: #000;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    border-radius: 0;
+    margin-right: 0;
+    line-height: 22px;
+    background-color: none;
+    padding: 13px 13px 13px 13px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 2px solid #22A7F0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .feedback-input:focus {
+    box-shadow: 0;
+    color: #3498db;
+    transition: .4s ease;
+    outline: none;
+    border-bottom: 2px solid black;
+    padding: 13px 13px 13px 13px;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+  }
+  
+  #button-blue {
+    font-weight: 400;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-color: #4f6fff;
+    color: white;
+    font-size: 24px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-top: -4px;
+    font-weight: 700;
+    transition: .5s ease;
+  }
+  
+  #button-blue:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(252, 252, 252);
+    background-image: linear-gradient(#8E2DE2, #4A00E0);
+  }
+  
+  
+  /* Breakpoint for Small devices [ phones, 600px and down ]*/
+  @media (max-width: 600px){
+    .Txt{
+      font-size: 50px;
+      margin: 0;
+    }
+    .icon-form{
+      display: none;
+    }
+  }
+  
