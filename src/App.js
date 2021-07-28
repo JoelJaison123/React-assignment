@@ -1,37 +1,54 @@
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Home from './pages/Home.js';
-import About from './pages/About.js';
-import Projects from "./pages/Projects.js";
-import Contact from './pages/Contact.js';
+
+import Nav from "./components/Nav";
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from "./pages/Projects";
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+        <Nav />
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        <Route path="/" exact>
+          { ({ match }) => <Home show={match !== null} /> }
+        </Route>
+        
+        <Route path="/about">
+          { ({ match }) => <About show={match !== null} /> }
+        </Route>
+
+        <Route path="/projects">
+          { ({ match }) => <Projects show={match !== null} /> }
+        </Route>
+
+        <Route path="/contact">
+          { ({ match }) => <Contact show={match !== null} /> }
+        </Route>
+
+        {/*<Route
+          render={({ location }) => (
+            <TransitionGroup>
+              <CSSTransition key={location.key} timeout={1000} classNames="fade">
+                <Switch location={location}>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/about" component={About} />
+                  <Route path="/projects" component={Projects} />
+                  <Route path="/contact" component={Contact} />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )}
+        />
+        
+         A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. 
         <Switch>
           <Route path="/about">
             <About />
@@ -42,10 +59,13 @@ export default function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
-        </Switch>
+          <Route path="/">
+            <h1>404</h1>
+          </Route>
+        </Switch>*/}
       </div>
     </Router>
   );
